@@ -1,0 +1,8 @@
+Ta có các thực thể chính như: Department, Company, Role, Person, Product, Payment, ViewRequestPayment, Proposal.
+- Các thực thể nhỏ như: Merchant, Audit kết thừa từ Company (Department type là 1 trong 2 loại đó); các thực thể Staff, Company Manager, DepartmentManager kế thừa từ Person ứng với các role thích hợp.
+- Mỗi person đều sẽ có company id và role thích hợp.
+- Ban đầu mỗi person phải cần xác thực (authenticate) để lấy về token và mỗi lần Person gửi request lên sẽ kèm theo token để phân quyền lấy ra user_id và lấy ra được user đang thực hiện để check các function cho phù hợp.
+- Ở phần Product thì các discount ban đầu sẽ là 0% và các Company/Department Manager có thể cập nhật theo % cho các discount đó.
+- Các createdAt và updatedAt sẽ tự động tạo khi ta tạo các row.
+
+
